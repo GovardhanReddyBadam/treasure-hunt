@@ -1,7 +1,7 @@
 import qrcode
 
 # ✅ DEFINE BASE_URL FIRST
-BASE_URL = "https://treasure-hunt.onrender.com"
+BASE_URL = "https://treasure-hunt-lhim.onrender.com"
 # OR (for local testing)
 # BASE_URL = "http://127.0.0.1:5000"
 
