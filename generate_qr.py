@@ -45,7 +45,7 @@ def add_footer(img, bg):
     )
     return out
 
-for i in range(1, 91):
+for i in range(1, 71):
     bg = BACKGROUND_COLORS[(i - 1) % 5]
 
     qr = segno.make(f"{BASE_URL}/hunt/{i}", error="h")
