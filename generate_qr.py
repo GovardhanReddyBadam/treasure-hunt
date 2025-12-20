@@ -1,7 +1,7 @@
 import segno
 from PIL import Image, ImageDraw, ImageFont
-
-BASE_URL = "https://unsiccative-ronni-paniculately.ngrok-free.dev"
+#Give the Ngrok base URl in place os star
+BASE_URL = "*"
 LOGO_PATH = "math_logo.png"
 
 BACKGROUND_COLORS = [
