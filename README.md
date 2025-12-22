@@ -111,10 +111,11 @@ Local servers (`127.0.0.1`) are not accessible from other devices.
 1. Install ngrok from https://ngrok.com  
 2. Authenticate:
    ```bash: ngrok config add-authtoken YOUR_TOKEN
-   
-3.Run Flask:python app.py
+3.Run Flask:python app.py   
 4.In another terminal:ngrok http 5000
 5.Use the generated public URL in QR generation
+
+
 
 📚 Learning Outcomes
 
