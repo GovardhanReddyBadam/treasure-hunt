@@ -10,6 +10,7 @@ Each QR code unlocks a **password-protected clue** (text and/or image), guiding 
 This project implements a **secure, multi-QR treasure hunt system** where:
 - Each QR code maps to a unique route
 - Access is protected using passwords and sessions
+- The password for the next QR is the answer for the question diplayed in the present QR
 - Clues can include riddles, questions, and images
 - The application can be accessed **across different devices and networks**
 
@@ -60,6 +61,7 @@ Password Qrs/
 │ ├── login.html # Password input page     
 ├── static/   
 │ └── clues/ # Clue images (local)   
+│ └── secure.html # Clue display page
 ├── requirements.txt   
 ├── .gitignore   
 └── README.md
