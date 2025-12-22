@@ -52,4 +52,91 @@ It is designed as a **real-world, event-ready application**, not just a demo.
 ---
 
 ## 🏗️ Project Structure
+Password Qrs/
+│
+├── app.py # Main Flask application
+├── generate_qr.py # Script to generate QR codes
+├── templates/
+│ ├── login.html # Password input page
+│ └── secure.html # Clue display page
+├── static/
+│ └── clues/ # Clue images (local)
+├── requirements.txt
+├── .gitignore
+└── README.md
 
+
+---
+
+## ⚙️ How the Application Works
+
+1. User scans a QR code  
+2. QR opens a route like `/hunt/<id>`  
+3. Flask displays a password page  
+4. On correct password:
+   - A session is created
+   - User is redirected to `/clue/<id>`
+5. Clue text is shown immediately  
+6. Clue image (if any) is shown after a delay  
+7. User proceeds to the next location  
+
+---
+
+## 🔐 Security Design
+
+- Password validation for every QR  
+- Flask sessions prevent unauthorized access  
+- Direct URL access is blocked without authentication  
+- High QR error correction allows safe logo embedding  
+
+---
+
+## 🧩 QR Code Generation
+
+- QR codes are generated in bulk (1–90)
+- Each QR points to a unique URL
+- 5 rotating background color themes
+- Central math-themed logo embedded
+- High scannability ensured
+
+---
+
+## 🌐 Public Access Using ngrok
+
+### Why ngrok?
+Local servers (`127.0.0.1`) are not accessible from other devices.  
+**ngrok creates a secure public tunnel** to your local Flask app.
+
+### Steps to use ngrok:
+
+1. Install ngrok from https://ngrok.com  
+2. Authenticate:
+   ```bash: ngrok config add-authtoken YOUR_TOKEN
+3.Run Flask:python app.py
+4.In another terminal:ngrok http 5000
+5.Use the generated public URL in QR generation
+
+📚 Learning Outcomes
+
+Through this project, I gained hands-on experience in:
+
+Flask routing and session management
+
+Secure web application design
+
+QR code generation and customization
+
+Image handling with Pillow
+
+Debugging real-world deployment issues
+
+Git & GitHub workflows
+
+Networking concepts (localhost vs public URLs)
+
+🏁 Conclusion
+
+This project demonstrates an end-to-end full-stack workflow, combining backend logic, frontend rendering, security, automation, and deployment concepts.
+It is suitable for academic evaluation, LinkedIn showcasing, and real event usage.
+
+⭐ If you find this project useful, feel free to star the repository!
